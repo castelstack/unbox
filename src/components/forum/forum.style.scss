@@ -1,0 +1,21 @@
+.forum {
+  position: fixed;
+  right: -8.5rem;
+  top: 80%;
+  height: 5rem;
+  width: 13%;
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+
+  //background-color: darkblue;
+  background-image: linear-gradient(to bottom, rgb(141, 3, 3), red);
+  //background-size: cover;
+
+  transform: rotate(270deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}

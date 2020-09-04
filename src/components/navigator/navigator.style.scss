@@ -1,0 +1,28 @@
+.navigator {
+  .list {
+    display: flex;
+    list-style-type: none;
+    margin-right: 2rem;
+  }
+
+  .list-item {
+    font-size: 1.9rem;
+    color: #e60d1c;
+    padding: .5rem 1rem;
+    
+    //border-radius: .5rem;
+    //border: 2px solid white;
+    //background-color: black;
+
+    &:hover {
+      background-color: #b40612;
+      color: white;
+      box-shadow:  2px 2px 9px rgb(109, 108, 108),  -2px -2px 9px white;
+  
+    }
+  }
+
+  .list-item:not(:last-child) {
+    margin-right: 2rem;
+  }
+} 

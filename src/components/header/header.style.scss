@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: .5px .5px 10px black;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  
+  
+  
+
+  .head-text {
+    color: white;
+    margin-right: auto;
+    font-size: 5rem;
+    display: flex;
+    padding-left: 1rem;
+    animation: moveInRight 1s ease-out;
+    color: #e60d1c;
+
+    .span-text {
+      color: rgb(8, 8, 8);
+    }
+
+    p {
+      font-size: 1rem;
+      color: white;
+      letter-spacing: 0.5rem;
+      font: italic;
+      align-self: flex-end;
+      padding: 1rem 1rem;
+    }
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem); }
+  80% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem); }
+  100% {
+    opacity: 1; 
+    -webkit-transform: translate(0);
+            transform: translate(0); } }

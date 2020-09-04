@@ -1,0 +1,111 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 8rem;
+  color: rgb(61, 61, 61);
+  height: 50vh;
+
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 86%);
+
+  .feature-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: space-between;
+    align-items: center;
+    width: 20vw;
+    height: 30rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 40%,
+      #e60d1c
+    );
+    //background-color: #e60d1c18;
+    //border: solid 2px #e60d1c;
+    //box-shadow: 1px 1px 10px black;
+
+    border-radius: 3rem;
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+
+    i {
+      font-size: 5rem;
+      color: #e60d1c;
+      padding: 2rem;
+    }
+
+    .text {
+      font-family: "Caveat", cursive;
+      font-size: 2rem;
+      padding: 0 8rem;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1rem;
+        margin-bottom: 3rem;
+        letter-spacing: 0.5rem;
+        color: #3f3f3ff1;
+        font-family: "Ultra", serif;
+      }
+    }
+    transition: all 100ms ease-in-out;
+    &:hover {
+      transform: translateY(-0.8rem);
+    }
+  }
+}
+
+@keyframes shift {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+  }
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+  }
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}

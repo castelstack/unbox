@@ -1,0 +1,32 @@
+.hot-Box {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .hot-head {
+        background-color: #f6f930;
+        height: 10rem;
+        transform: translateY(70%);
+
+        span {
+            font-size: 3rem;
+
+            i {
+                color: red;
+            }
+        }
+    }
+  .hotbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    //justify-content: space-around;
+    //justify-items: center;
+    grid-column-gap: 2rem;
+    grid-gap: 4rem;
+    padding: 4rem 15rem;
+    justify-content: space-between;
+    //background-image: linear-gradient(to right bottom, rgb(233, 233, 233) 70%, rgb(54, 54, 54));
+    
+  }
+}

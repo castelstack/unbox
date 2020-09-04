@@ -1,0 +1,47 @@
+.block {
+  position: relative;
+  height: 25rem;
+  width: 100%;
+  //background-color: black;
+  overflow: hidden;
+  background-size: cover;
+  object-fit: contain;
+  box-shadow: -3px -3px 15px white, 5px 5px 13px rgb(24, 23, 23);
+
+  &:hover {
+    box-shadow: inset -1px -1px 10px white, inset 1px 1px 10px rgb(24, 23, 23);
+  }
+
+  .title {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    padding: 0.7rem 2.5rem;
+    background-color: #f6f930;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+  }
+
+  .hot-box {
+    position: absolute;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    background-color: #f6f930;
+    top: -2.5rem;
+    right: -1rem;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    //padding-top: .5rem;
+
+    i {
+      color: red;
+      padding-right: .5rem;
+    }
+  }
+}

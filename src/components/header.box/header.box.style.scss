@@ -1,0 +1,69 @@
+.headerBox {
+  height: 100vh;
+  background-size: contain;
+  background-image: url("../../img/bg.jpeg");
+  
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 86%);
+  display: grid;
+  grid-template-rows: 5rem;
+  align-content: center;
+  //justify-items: center;
+  
+  
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-top: -20rem;
+    padding-left: 16rem;
+
+    h2 {
+      line-height: 0.2rem;
+    }
+    span {
+      color: #e60d1c;
+    }
+
+    p {
+      font-size: 5rem;
+    }
+
+    button {
+      font-size: 2rem;
+      //font-weight: bold;
+      padding: 1.5rem 2.5rem;
+      background-color: #e60d1c;
+      color: white;
+      border-radius: 9rem;
+      width: 10%;
+      //text-transform: uppercase;
+      border: none;
+      margin-top: 7rem;
+      box-shadow:3px 3px 15px black;
+      transition: translate 1s ease-in-out;
+
+      &:hover {
+        transform: translateY(-.3rem);
+      }
+    }
+  }
+  h4 {
+    font-size: 3rem;
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    width: 70%;
+    justify-self: flex-end;
+    transform: rotate(90deg) translateY(-50rem) translateX(30rem);
+    &::after {
+      content: "";
+      display: block;
+      background-color: black;
+      height: 1px;
+      
+    }
+  }
+}
