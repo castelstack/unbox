@@ -9,5 +9,39 @@
 
 html {
     font-size: 65%;
-    font-family: 'Righteous', cursive;
+    //font-family: 'Righteous', cursive;
+    width: 100vw;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 92.25em) {
+      width: 100vw;
+      overflow-x: hidden;
+    }
+
+    @media only screen and (max-width: 88.56em){
+      font-size: 55%;
+      //width: 100vw;
+      overflow-x: hidden;
+
+    }
+
+    @media only screen and (max-width: 64em){
+      font-size: 45%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    @media only screen and (max-width: 46.87em){
+      font-size: 40%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+}
+$color-main: rgb(16, 16, 15);
+$color-main-light:  rgb(43, 43, 43);
+$color-main-dark: rgb(29, 29, 29);
+.App {
+    background-color: $color-main-light;
+    width: 100vw;
+    overflow-x: hidden;
 }

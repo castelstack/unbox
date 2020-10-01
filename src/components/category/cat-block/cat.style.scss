@@ -1,23 +1,65 @@
+$color-main: rgb(16, 16, 15);
+$color-main-light:  rgb(43, 43, 43);
+$color-main-dark: rgb(29, 29, 29);
+$color-dark:#181818;
+
+$color-text:  rgb(225, 225, 225);
+$color-text-dark:  rgb(119, 119, 119);
+
+$color-unbox: #e60d1c;
+$color-unbox-dark: #b40612;
+$color-yellow:  #f6f930;
 .cat {
   padding: 2.56rem 2rem;
   display: flex;
-  align-items: center;
-  box-shadow: 5px 5px 9px rgb(32, 31, 31);
-  background-image: linear-gradient(
+  
+  justify-content: center;
+  border: none;
+  box-shadow: 5px 5px 9px rgb(7, 7, 7);
+  // background-image: linear-gradient(
+  //     to left,
+  //     rgba(255, 255, 255, 0.459),
+  //     $color-main 80%
+  //   ),
+  //   url(../../../img/a-pic.jpg);
+  //background-image: linear-gradient(to right,white, #202020 70%  );
+
+  @media only screen and (max-width: 88em){
+    background-image: linear-gradient(
       to left,
       rgba(255, 255, 255, 0.459),
-      #e60d1c 70%
+      $color-main 80%
     ),
     url(../../../img/a-pic.jpg);
-  //background-image: linear-gradient(to right,white, #202020 70%  );
+    
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 50em){
+    background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.459),
+      $color-main 80%
+    ),
+    url(../../../img/a-pic.jpg);
+    
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 42.87em){
+    width: 85vw;
+  }
 
   .title-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    color: $color-text;
 
     i {
       font-size: 3rem;
       padding-right: 0.5rem;
+      color: white;
     }
 
     .title {
@@ -29,12 +71,12 @@
   }
   transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
-    box-shadow: 5px 5px 13px rgb(112, 112, 112);
+    box-shadow: 5px 5px 13px rgb(4, 4, 4);
     transform: scale(1.02);
     background-image: linear-gradient(
       to left,
-      rgba(255, 255, 255, 0.459) 10%,
-      #e60d1c 90%
+      rgba(255, 255, 255, 0.459),
+      $color-main 100%
     ),
     url(../../../img/a-pic.jpg);
   }

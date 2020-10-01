@@ -1,6 +1,6 @@
 .forum {
   position: fixed;
-  right: -8.5rem;
+  right: -4.8vw;
   top: 80%;
   height: 5rem;
   width: 13%;
@@ -18,4 +18,13 @@
   align-items: center;
   justify-content: space-between;
   
+
+  @media only screen and (max-width: 88.56em){
+    //right: -6.2rem;
+  }
+
+  @media only screen and (max-width: 42.56em){
+    right: -9.2rem;
+    width: 40%;
+  }
 }

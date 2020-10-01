@@ -1,32 +1,50 @@
+$color-text:  rgb(225, 225, 225);
+$color-text-dark:  rgb(119, 119, 119);
+$color-dark:#181818;
+
 .hot-Box {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //height: 100vh;
 
-    .hot-head {
-        background-color: #f6f930;
-        height: 10rem;
-        transform: translateY(70%);
+  .hot-head {
+    background-color: $color-dark;
+    height: 10rem;
+    transform: translateY(70%);
+    padding-top: 1rem;
 
-        span {
-            font-size: 3rem;
-
-            i {
-                color: red;
-            }
-        }
+    span {
+      font-size: 3rem;
+      padding-left:2.5rem;
+     
+      color: $color-text;
+      i {
+        color: red;
+      }
     }
+  }
   .hotbox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
-    //justify-content: space-around;
-    //justify-items: center;
     grid-column-gap: 2rem;
     grid-gap: 4rem;
     padding: 4rem 15rem;
     justify-content: space-between;
+    //align-self: center;
     //background-image: linear-gradient(to right bottom, rgb(233, 233, 233) 70%, rgb(54, 54, 54));
-    
+
+    @media only screen and (max-width: 88.56em){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 56.25em){
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    @media only screen and (max-width: 42.87em){
+      align-self: center;
+      width: 80%;
+    }
   }
 }

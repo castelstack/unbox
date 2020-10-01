@@ -1,0 +1,117 @@
+$color-main: rgb(16, 16, 15);
+$color-main-light: rgb(29, 29, 28);
+$color-text: rgb(225, 225, 225);
+$color-text-dark: rgb(119, 119, 119);
+$color-unbox: #e60d1c;
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+ // top: -14px;
+ // font-size: 12px;
+  color: $color-unbox;
+}
+
+.logIn {
+  color: white;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+      font-size: 4rem;
+    //text-align: center;
+  }
+  .colorPri {
+    color: $color-unbox;
+  }
+
+  .form {
+      display: flex;
+      flex-direction: column;
+    .form-input {
+      background: none;
+      background-color: rgb(164, 163, 163);
+      color: black;
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $color-unbox;
+      margin: 25px 0;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus ~ .form-input-label {
+        @include shrinkLabel();
+      }
+    }
+
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+
+    .form-input-label {
+      color: $color-unbox;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: -2rem;
+      pointer-events: none;
+     
+      transition: 300ms ease all;
+
+    
+    }
+  }
+
+  .submit {
+    font-size: 2rem;
+    padding: 1rem 2.5rem;
+    background-color: $color-unbox;
+    color: white;
+    border-radius: 1rem;
+    
+    border: none;
+    
+    box-shadow: 3px 3px 15px black;
+
+    align-self: center;
+
+    &:hover {
+        transform: translateY(-0.2rem);
+        transition: all 1s ease-in-out;
+      }
+
+      &:focus {
+          outline: hidden;
+      }
+  }
+  .google{
+    background-color: rgb(19, 19, 142);
+    margin-top: 3rem;
+    font-size: 2rem;
+    padding: 1rem 2.5rem;
+    
+    color: white;
+   // border-radius: 1rem;
+    
+    border: none;
+    
+    box-shadow: 3px 3px 15px black;
+
+    align-self: center;
+
+    &:hover {
+        background-color: rgb(25, 25, 196);
+      }
+
+     
+  }
+}

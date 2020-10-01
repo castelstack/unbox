@@ -3,6 +3,11 @@ import React, { Component } from "react";
 import Cat from "../category/cat-block/cat.componenet";
 import "./category.style.scss";
 
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
+
+
 class Category extends Component {
   constructor() {
     super();
@@ -19,7 +24,7 @@ class Category extends Component {
         },
         {
           id: 2,
-          element: "<FontAwesomeIcon icon={faGamepad} />",
+          element: "faGamepad>",
           title: "Sport",
           color: "orangered",
           details:
@@ -36,7 +41,7 @@ class Category extends Component {
         {
           id: 4,
           element: "<FontAwesomeIcon icon={faCoins} />",
-          title: "News",
+          title: "App",
           color: "tomato",
           details:
             " Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius accusantium quos debitis doloribus distinctio.",
@@ -75,7 +80,7 @@ class Category extends Component {
         },
         {
           id: 9,
-          element: "<FontAwesomeIcon icon={faCoins} />",
+          element: "faCoins",
           title: "Music",
           color: "skyblue",
           details:
@@ -92,11 +97,11 @@ class Category extends Component {
         <h4>CATEGORY</h4>
       <div className='category'>
         {this.state.categories
-          .filter((categories, idx) => idx < 5)
-          .map(({ id, title, element, details }) => (
-            <Cat key={id} title={title} element={element} />
+          
+          .map(({ id, title, element, color }) => (
+            <Cat key={id} title={title} element={element} color={color}/>
           ))}
-        <button>view all</button>
+        
       </div>
 
       </div>

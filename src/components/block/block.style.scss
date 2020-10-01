@@ -1,3 +1,10 @@
+$color-main: rgb(16, 16, 15);
+$color-main-light: rgb(43, 43, 43);
+$color-main-dark: rgb(29, 29, 29);
+$color-text: rgb(225, 225, 225);
+$color-text-dark: rgb(119, 119, 119);
+$color-unbox: #e60d1c;
+$color-unbox-dark: #b40612;
 .block {
   position: relative;
   height: 25rem;
@@ -5,9 +12,20 @@
   //background-color: black;
   overflow: hidden;
   background-size: cover;
-  object-fit: contain;
-  box-shadow: -3px -3px 15px white, 5px 5px 13px rgb(24, 23, 23);
+  //object-fit: contain;
+  box-shadow: -3px -3px 15px rgb(14, 14, 14), 5px 5px 13px rgb(24, 23, 23);
 
+  @media only screen and (max-width: 56.26em) {
+    height: 30;
+    width: 80%;
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 50em) {
+    background-size: cover;
+    object-fit: fill;
+    width: 100%;
+  }
   &:hover {
     box-shadow: inset -1px -1px 10px white, inset 1px 1px 10px rgb(24, 23, 23);
   }
@@ -17,16 +35,16 @@
     position: absolute;
     bottom: 0;
     padding: 0.7rem 2.5rem;
-    background-color: #f6f930;
+    background-color: $color-main-light;
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
+    color: $color-text;
   }
 
   .hot-box {
     position: absolute;
     font-size: 2rem;
-    color: rgb(0, 0, 0);
-    background-color: #f6f930;
+    color: $color-text;
+    background-color: $color-main-dark;
     top: -2.5rem;
     right: -1rem;
     height: 8rem;
@@ -41,7 +59,7 @@
 
     i {
       color: red;
-      padding-right: .5rem;
+      padding-right: 0.5rem;
     }
   }
 }
